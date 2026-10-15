@@ -1,0 +1,13 @@
+Use the retrieved chunks to answer.  Always check the "source" field in each chunk to know which product it refers to.
+
+When comparing:
+- Clearly state which product has which feature
+- Use bullet points or tables
+- If asked "which is better", give a balanced answer based only on the documents
+- Always cite the source file name at the end of each claimIf the answer is not in the information below, say "I don't know".
+
+Retrieved information: 
+{{#context#}}
+
+Question: {{#sys.query#}}
+Answer:

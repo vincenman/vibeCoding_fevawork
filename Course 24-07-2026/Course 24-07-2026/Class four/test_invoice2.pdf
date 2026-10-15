@@ -1,0 +1,91 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj<< /Type /Catalog /Pages 2 0 R >>endobj
+2 0 obj<< /Type /Pages /Kids [3 0 R] /Count 1 >>endobj
+3 0 obj<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>endobj
+4 0 obj<< /Length 3625 >>stream
+0.1 0.21 0.36 RG 0.1 0.21 0.36 rg
+50 735 m 545 735 l 1.5 w S
+0 0 0 RG 0 0 0 rg
+50 535 m 545 535 l 0.6 w S
+BT /F2 20 Tf 50.0 780.0 Td (ACME SUPPLY CO.) Tj ET
+BT /F1 9 Tf 50.0 762.0 Td (128 Harbour Road, Suite 4B  ∑  Singapore 119555) Tj ET
+BT /F1 9 Tf 50.0 748.0 Td (Tel: +65 6123 4567  ∑  Email: billing@acmesupply.example) Tj ET
+BT /F2 16 Tf 50.0 720.0 Td (INVOICE) Tj ET
+BT /F1 10 Tf 50.0 695.0 Td (Invoice No.: INV-2026-00482) Tj ET
+BT /F1 10 Tf 320.0 695.0 Td (Issue Date: 09 Aug 2026) Tj ET
+BT /F1 10 Tf 50.0 680.0 Td (PO Number: PO-77821) Tj ET
+BT /F1 10 Tf 320.0 680.0 Td (Due Date: 23 Aug 2026) Tj ET
+BT /F1 10 Tf 50.0 665.0 Td (Payment Terms: Net 14) Tj ET
+BT /F1 10 Tf 320.0 665.0 Td (Currency: SGD) Tj ET
+BT /F2 11 Tf 50.0 635.0 Td (Bill To) Tj ET
+BT /F1 10 Tf 50.0 618.0 Td (Pacific Retail Pte Ltd) Tj ET
+BT /F1 10 Tf 50.0 604.0 Td (Attn: Accounts Payable) Tj ET
+BT /F1 10 Tf 50.0 590.0 Td (88 Orchard Boulevard) Tj ET
+BT /F1 10 Tf 50.0 576.0 Td (Singapore 238891) Tj ET
+BT /F1 10 Tf 50.0 562.0 Td (UEN: 201912345A) Tj ET
+BT /F2 11 Tf 320.0 635.0 Td (Ship To) Tj ET
+BT /F1 10 Tf 320.0 618.0 Td (Pacific Retail ? Warehouse B) Tj ET
+BT /F1 10 Tf 320.0 604.0 Td (12 Jurong Port Road) Tj ET
+BT /F1 10 Tf 320.0 590.0 Td (Singapore 619121) Tj ET
+BT /F1 10 Tf 320.0 576.0 Td (Contact: Mei Ling \(+65 9000 1122\)) Tj ET
+BT /F2 10 Tf 50.0 520.0 Td (#) Tj ET
+BT /F2 10 Tf 70.0 520.0 Td (Description) Tj ET
+BT /F2 10 Tf 360.0 520.0 Td (Qty) Tj ET
+BT /F2 10 Tf 400.0 520.0 Td (Unit Price) Tj ET
+BT /F2 10 Tf 480.0 520.0 Td (Amount) Tj ET
+BT /F1 10 Tf 50.0 500.0 Td (1) Tj ET
+BT /F1 10 Tf 70.0 500.0 Td (Thermal receipt paper rolls \(80mm x 80m\)) Tj ET
+BT /F1 10 Tf 365.0 500.0 Td (24) Tj ET
+BT /F1 10 Tf 415.0 500.0 Td (3.50) Tj ET
+BT /F1 10 Tf 490.0 500.0 Td (84.00) Tj ET
+BT /F1 10 Tf 50.0 482.0 Td (2) Tj ET
+BT /F1 10 Tf 70.0 482.0 Td (Barcode scanner - USB handheld \(Model BS-220\)) Tj ET
+BT /F1 10 Tf 365.0 482.0 Td (3) Tj ET
+BT /F1 10 Tf 415.0 482.0 Td (89.00) Tj ET
+BT /F1 10 Tf 490.0 482.0 Td (267.00) Tj ET
+BT /F1 10 Tf 50.0 464.0 Td (3) Tj ET
+BT /F1 10 Tf 70.0 464.0 Td (A4 copy paper 80gsm \(5 reams/carton\)) Tj ET
+BT /F1 10 Tf 365.0 464.0 Td (10) Tj ET
+BT /F1 10 Tf 415.0 464.0 Td (18.90) Tj ET
+BT /F1 10 Tf 490.0 464.0 Td (189.00) Tj ET
+BT /F1 10 Tf 50.0 446.0 Td (4) Tj ET
+BT /F1 10 Tf 70.0 446.0 Td (Label printer ribbon - black, 110mm) Tj ET
+BT /F1 10 Tf 365.0 446.0 Td (6) Tj ET
+BT /F1 10 Tf 415.0 446.0 Td (12.40) Tj ET
+BT /F1 10 Tf 490.0 446.0 Td (74.40) Tj ET
+BT /F1 10 Tf 50.0 428.0 Td (5) Tj ET
+BT /F1 10 Tf 70.0 428.0 Td (Delivery / handling \(same-day Jurong\)) Tj ET
+BT /F1 10 Tf 365.0 428.0 Td (1) Tj ET
+BT /F1 10 Tf 415.0 428.0 Td (25.00) Tj ET
+BT /F1 10 Tf 490.0 428.0 Td (25.00) Tj ET
+BT /F1 10 Tf 400.0 400.0 Td (Subtotal:) Tj ET
+BT /F1 10 Tf 480.0 400.0 Td (639.40) Tj ET
+BT /F1 10 Tf 400.0 384.0 Td (GST \(9%\):) Tj ET
+BT /F1 10 Tf 480.0 384.0 Td (57.55) Tj ET
+BT /F2 11 Tf 400.0 366.0 Td (Total Due:) Tj ET
+BT /F2 11 Tf 470.0 366.0 Td (SGD 696.95) Tj ET
+BT /F2 11 Tf 50.0 326.0 Td (Payment Instructions) Tj ET
+BT /F1 9 Tf 50.0 310.0 Td (Bank: DBS Bank Ltd  ∑  Account Name: ACME SUPPLY CO. PTE. LTD.) Tj ET
+BT /F1 9 Tf 50.0 297.0 Td (Account No: 072-123456-7  ∑  SWIFT: DBSSSGSG) Tj ET
+BT /F1 9 Tf 50.0 284.0 Td (Please reference invoice number INV-2026-00482 on all remittances.) Tj ET
+BT /F1 8 Tf 50.0 255.0 Td (Notes: Goods remain property of ACME Supply Co. until paid in full.) Tj ET
+BT /F1 8 Tf 50.0 243.0 Td (Late payments may incur 1.5% monthly interest. Thank you for your business.) Tj ET
+BT /F1 8 Tf 50.0 219.0 Td (This is a SAMPLE invoice generated for OCR testing only.) Tj ET
+endstream
+endobj
+5 0 obj<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>endobj
+6 0 obj<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000062 00000 n 
+0000000117 00000 n 
+0000000251 00000 n 
+0000003926 00000 n 
+0000003994 00000 n 
+trailer<< /Size 7 /Root 1 0 R >>
+startxref
+4067
+%%EOF

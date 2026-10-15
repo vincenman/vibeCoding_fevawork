@@ -1,0 +1,187 @@
+{
+  "name": "Personal assistant v3",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.message.text }}",
+        "options": {
+          "systemMessage": "You are a personal automation assistant for Victor Lee, reachable via Telegram.\n\nUse the tools provided through MCP. Their names, descriptions, and required parameters are supplied by the tool schemas — call them through normal tool use; do not invent a custom JSON action format.\n\nGuidelines:\n- Read the user’s message carefully and decide whether a tool is needed.\n- If the request is clear, call the matching tool with complete, accurate parameters from the tool schema.\n- If anything important is missing or ambiguous, ask a short clarifying question instead of guessing.\n- When sending email, write a clear subject and body, and sign as Victor Lee.\n- After using a tool, reply briefly in plain language with what you did or what you need next.\n",
+          "returnIntermediateSteps": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "449e629f-d651-4e5a-b528-b9f95c676327",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "typeVersion": 1,
+      "position": [
+        128,
+        208
+      ],
+      "id": "81fe6663-0e41-4af8-b5cb-063728fe50c0",
+      "name": "Azure OpenAI Chat Model",
+      "credentials": {
+        "azureOpenAiApi": {
+          "id": "VaJkoZsaWTbTgdUp",
+          "name": "Azure Open AI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sseEndpoint": "https://vickslee.app.n8n.cloud/mcp/88f22b5a-a779-4d9b-b83b-d9135aa95f37"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1,
+      "position": [
+        528,
+        192
+      ],
+      "id": "49f5e367-1d53-4d5d-bd0a-c8989a6ef654",
+      "name": "MCP Client"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "61db22c3-6b42-4cd0-afda-950556496466",
+      "name": "Telegram Trigger",
+      "webhookId": "37f74fc4-b825-42d5-a2b0-05dba01575eb",
+      "credentials": {
+        "telegramApi": {
+          "id": "iuK6F6b9nWMPYcho",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "727270924",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "disable_notification": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        576,
+        0
+      ],
+      "id": "ea68ce05-0ef2-4bb5-8074-88cc9165fb69",
+      "name": "Send a text message",
+      "webhookId": "9f20422d-a7f0-4c19-af8a-e11a95701bb5",
+      "credentials": {
+        "telegramApi": {
+          "id": "iuK6F6b9nWMPYcho",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionKey": "",
+        "contextWindowLength": 10
+      },
+      "id": "9eb6cfcf-5bae-4bea-ad64-998cf04007da",
+      "name": "Window Buffer Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        320,
+        208
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Azure OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8110b67c-bc90-4c7c-97a0-65d82a360812",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "52242f84ce36d6c082d8a906ef8dbd9d5ae26a172e8f30bbe6a7b77c62bba263"
+  },
+  "id": "akV3hNDc7HQ7ptL7",
+  "tags": []
+}

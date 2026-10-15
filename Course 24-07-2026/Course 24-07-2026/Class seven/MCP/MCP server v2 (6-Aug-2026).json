@@ -1,0 +1,98 @@
+{
+  "name": "MCP server 1",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "88f22b5a-a779-4d9b-b83b-d9135aa95f37"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "0430b4aa-8725-4211-9c76-5ba74586d751",
+      "name": "MCP Server Trigger",
+      "webhookId": "88f22b5a-a779-4d9b-b83b-d9135aa95f37"
+    },
+    {
+      "parameters": {
+        "sendTo": "vickslee@gmail.com",
+        "subject": "={{ $fromAI('subject', 'Clear, concise email subject line') }}",
+        "message": "={{ $fromAI('message', 'Full email body. Sign off as Victor Lee.') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        304,
+        176
+      ],
+      "id": "d384ccd2-b0b6-4b4a-bedf-125e7d92e245",
+      "name": "Send Email",
+      "webhookId": "23dafba9-44cd-497e-93cc-d349df0ba852",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "vMo5BltKywzQGBvo",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Get the latest daily stock close price for a ticker symbol using Yahoo Finance via the local FastAPI service. Use when the user asks for a stock price, close price, or market quote. Requires a ticker symbol such as AAPL, MSFT, or TSLA.",
+        "method": "POST",
+        "url": "http://127.0.0.1:8000/call",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"tool\": \"get_market_data\",\n  \"args\": {\n    \"symbol\": \"{{ $fromAI('symbol', 'Stock ticker symbol, e.g. AAPL, MSFT, TSLA', 'string') }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        304,
+        -48
+      ],
+      "id": "a7c3e91f-2b4d-4f8a-9e1c-6d5b8f0a3c21",
+      "name": "Get Stock Close Price"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Send Email": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Stock Close Price": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d591a7b9-5913-4fee-8dfe-bc27ed734e28",
+  "meta": {
+    "instanceId": "52242f84ce36d6c082d8a906ef8dbd9d5ae26a172e8f30bbe6a7b77c62bba263"
+  },
+  "id": "Ze8666wro2ekvjRa",
+  "tags": []
+}
