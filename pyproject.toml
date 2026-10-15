@@ -1,0 +1,17 @@
+[project]
+name = "videcoding-fevawork"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "vincent_wf_man", email = "vincent_wf_man@customs.gov.hk" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+videcoding-fevawork = "videcoding_fevawork:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
