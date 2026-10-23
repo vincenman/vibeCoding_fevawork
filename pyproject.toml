@@ -7,7 +7,11 @@ authors = [
     { name = "vincent_wf_man", email = "vincent_wf_man@customs.gov.hk" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "dotenv>=0.9.9",
+    "openai>=3.37.0",
+    "pymupdf>=2.0",
+]
 
 [project.scripts]
 videcoding-fevawork = "videcoding_fevawork:main"

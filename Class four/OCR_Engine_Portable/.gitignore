@@ -1,0 +1,13 @@
+.env
+.env_openrouter
+.env_*
+temp
+node_modules/
+frontend/dist/
+backend/__pycache__/
+*.pyc
+__pycache__/
+.venv/
+venv/
+.env_claude_azure_deepseek
+.claude_bridge.log
